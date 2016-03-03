@@ -18,7 +18,7 @@ fin_color:        "0,0,0"
 # Change url to your domain. Leave localhost server or blank when working locally.
 # or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
 # whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:
+url:              http://czekaj.github.io/blog/
 
 # Owner/author information
 owner:
