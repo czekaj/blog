@@ -216,7 +216,7 @@ q {
 }
 @include hyphens(none);
 pre {
-  
+
 }@include text-shadow(none);
 /* - Font weight classes - */
 .black {
@@ -473,7 +473,7 @@ html {
 .blog-title {
   font-size: 36px;
   line-height: 36px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin-bottom: 12px;
 }
 .blog-title span {
@@ -895,8 +895,10 @@ h6.lighter {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfontf77b.eot?v=3.2.1');
-  src: url('../font/fontawesome-webfontd41d.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('../font/fontawesome-webfontf77b.woff?v=3.2.1') format('woff'), url('../font/fontawesome-webfontf77b.ttf?v=3.2.1') format('truetype'), url('../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  src: url('../font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'),
+       url('../font/fontawesome-webfont.woff?v=3.2.1') format('woff'),
+       url('../font/fontawesome-webfont.ttf?v=3.2.1') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -3854,7 +3856,8 @@ a#slide{
     top:10px;
     left:10px;
     text-align:center;
-    font:22px/40px "icon";
+    font-family: FontAwesome;
+    font:22px/40px;
     color:#fff;
     background:#262626;
     border-radius:3px;
@@ -3866,18 +3869,19 @@ a#slide:hover{
     }
 
 a#slide:after{
-    content:"F"
+    line-height: 40px;
+    content: "\f0c9";
     }
 
 a#slide.slide:after{
     position:absolute;
-    content:"X";
-    top:11px;
+    content:"\f104";
     left:50%;
     width:40px;
     height:40px;
     margin:0 0 0 -20px;
-    font:18px "icon" !important;
+    font-family: FontAwesome !important;
+    font:22px/40px;
     vertical-align:middle
     }
 
@@ -3897,7 +3901,7 @@ a#slide.slide:after{
 
 #sidebar h2{
     margin:0 0 16px !important;
-    font:900 16px/1em "Lato",sans-serif;
+    font:900 16px/1em "Raleway",sans-serif;
     color:#fff;
     }
 
@@ -3921,7 +3925,8 @@ a#slide.slide:after{
 
 #sidebar #navigation li a{
     padding:0 0 18px;
-    font:700 16px/1em "Cambria";
+    font:700 16px/1em;
+    font-family: 'Raleway', sans-serif;
     text-transform: uppercase;;
     color:#b3b3b1
     }
@@ -4013,7 +4018,7 @@ body.slide{
 /*      Responsive      */
 
 @media screen and (max-width:1140px){
-    
+
     #header,
     #posts-container,
     .entry .text,
@@ -4022,7 +4027,7 @@ body.slide{
     .entry .details{
         width:700px
         }
-    
+
     }
 
 @media screen and (max-width:700px){
@@ -4047,9 +4052,9 @@ body.slide{
 
 
 @media screen and (max-width:500px){
-    
+
     a#slide{
-        position:absolute    
+        position:absolute
         }
 
 
